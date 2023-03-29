@@ -1,0 +1,12 @@
+div {
+  width: 200px;
+  height: 100px;
+  background-color: lightcoral;
+}
+
+/* Emmet */
+div.logo {
+  width: 200px;
+  height: 100px;
+  background-color: lightpink;
+}
