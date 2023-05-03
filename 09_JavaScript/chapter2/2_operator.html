@@ -99,15 +99,21 @@
     result = num2++; //++가 후위에 있어서 나중에 계산 //result = num2; num2 = num2 + 1;
     document.write(result, ' ', num2, '<br>'); //result는 20이 num2는 21이 나옴
 
-    result = ++num2; //++가 전위에 있어서 나중에 계산 //num2 = num2 + 1; result = num2;
+    result = ++num2; //++가 전위에 있어서 result 나중에 계산 //num2 = num2 + 1; result = num2;
     document.write(result, ' ', num2, '<br>'); //num2 먼저 계산, result 나중 계산
 
     // Quiz
     num1 = 10;
     num2 = 20;
     result = ++num1 + num2--;
+
+    // document.write(result, ' ', num1, '<br>'); 
+    // document.write(result, ' ', num2, '<br>'); 
+
     // result, num1, num2에 저장된 값은?
     // 순서대로 풀어서 써보기
+
+    // num1 :11, num2 : 19, result : 31
 
   </script>
 </head>
