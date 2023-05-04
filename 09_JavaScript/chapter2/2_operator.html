@@ -109,7 +109,7 @@
     // 다른 연산자와 같이 사용 시 위치(전위, 후위)에 따라 연산이 달라짐
     num2 = 20;
 
-    result = num2++; //++가 후위에 있어서 나중에 계산 //result = num2; num2 = num2 + 1;
+    result = num2++; //++가 후위에 있어서 result 먼저 계산 //result = num2; num2 = num2 + 1;
     document.write(result, ' ', num2, '<br>'); //result는 20이 num2는 21이 나옴
 
     result = ++num2; //++가 전위에 있어서 result 나중에 계산 //num2 = num2 + 1; result = num2;
