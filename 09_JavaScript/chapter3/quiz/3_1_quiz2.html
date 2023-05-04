@@ -11,10 +11,12 @@
     // 결과는 "3의 배수" 혹은 "3의 배수 아님" 으로 브라우저에 출력하세요.
 
     // 풀이2
-    const num1 = prompt('정수입력');
+    const num = prompt('정수입력','0');
 
-    if (condition) {
-      
+    if (num % 3 == 0) {
+      document.write('3의 배수');
+    } else{
+      document.write('3의 배수 아님');
     }
     
   </script>
