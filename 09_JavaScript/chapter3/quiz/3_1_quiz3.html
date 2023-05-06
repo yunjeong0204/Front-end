@@ -18,18 +18,16 @@
     const a = prompt('학년 입력', '0');
     const b = prompt('점수 입력', '0');
 
-    if (a == 1 || a == 2 || a == 3 ) {
-      
+    if (a == 1 || a == 2 || a == 3) {
+      if (b >= 60) {
+        document.write('합격');
+      } else if (a == 4 || a == 5 || a == 6) {
+        if (b >= 70) {
+          document.write('합격');
+        }
+      }
     }
     
-    // switch (a) {
-    //   case value:
-        
-    //     break;
-    
-    //   default:
-    //     break;
-    // }
   </script>
 </head>
 <body>

@@ -21,14 +21,16 @@
     // 풀이4-1
     if (height >= 150) {
       document.write('놀이기구 이용 가능');
-      if (height < 150) {
-        confirm('부모님과 함께 왔습니까?');
-        document.write('좋은 시간 보내렴~');
-
-      } else {
-        document.write('어른 모시고 다시 오렴~');
+    } else if (height < 150) {
+      confirm('부모님과 함께 왔나요?'); 
+      msg = '즐겁게 노세요 ';
+      if (msg) {
+        document.write('즐겁게 노세요');
+      } else{
+        // document.write('어른 모시고 다시 오렴~');
       }
-    }
+    } 
+
     
 
     // 풀이4-2
