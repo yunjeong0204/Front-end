@@ -17,9 +17,23 @@
     const n2 = Number(prompt('정수2 입력', '0'));
     const n3 = Number(prompt('정수3 입력', '0'));
 
-    const sum = n1 + n2 + n3;
-    const avg = (n1 + n2 + n3)/3;
+    // 최대값
+    let max = n1;
+    if (max < n2) max = n2;
+    if (max < n3) max = n3;
+    // max = Math.max(n1, n2, n3);
 
+    // 최소값
+    let min = n1;
+    if (min > n2) min = n2; 
+    if (min > n3) min = n3; 
+    // min = Math.min(n1, n2, n3);
+
+    const sum = n1 + n2 + n3; //합계
+    const avg = (n1 + n2 + n3)/3; //평균
+
+    document.write(max, '<br>');
+    document.write(min, '<br>');
     document.write(sum, '<br>');
     document.write(avg);
 

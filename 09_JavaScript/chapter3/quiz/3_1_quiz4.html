@@ -19,21 +19,23 @@
     let msg = '놀이기구 이용 가능';
     
     // 풀이4-1
-    if (height >= 150) {
-      document.write('놀이기구 이용 가능');
-    } else if (height < 150) {
-      confirm('부모님과 함께 왔나요?'); 
-      msg = '즐겁게 노세요 ';
-      if (msg) {
-        document.write('즐겁게 노세요');
-      } else{
-        // document.write('어른 모시고 다시 오렴~');
+    if (height < 150) {
+      const withMom = confirm('부모님과 함께 왔나요?');
+      if (withMom) {
+        msg = '좋은 시간 보내렴';
+      } else {
+        msg = '어른 모시고 다시 오렴~';
       }
-    } 
+    }
+    document.write(msg);
 
     
-
     // 풀이4-2
+    // 삼항연산자 써서 하는 방법
+    // if (height < 150) {
+    //   confirm('부모님과 함께 왔나요?') ? '좋은 시간 보내렴' : '어른 모시고 다시 오렴~';
+    // }
+    // document.write(msg);
     
   </script>
 </head>

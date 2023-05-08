@@ -15,18 +15,22 @@
 
     // 풀이3
 
-    const a = prompt('학년 입력', '0');
+    const a = prompt('학년 입력', '1');
     const b = prompt('점수 입력', '0');
+    let msg = '에러입니다';
 
-    if (a == 1 || a == 2 || a == 3) {
-      if (b >= 60) {
-        document.write('합격');
-      } else if (a == 4 || a == 5 || a == 6) {
-        if (b >= 70) {
-          document.write('합격');
-        }
+    if (b < 0 || b > 100) {
+      alert(msg);
+    } else { //점수가 0이상 100이하인 경우
+      if (a >= 1 && a <= 3 && b >= 60
+      || a >= 4 && a <= 6 && b >= 70) {
+        msg = '합격';
+      } else {
+        msg = '불합격';
       }
     }
+    document.write(msg);
+
     
   </script>
 </head>
