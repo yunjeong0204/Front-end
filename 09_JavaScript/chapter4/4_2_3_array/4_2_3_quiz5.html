@@ -13,14 +13,20 @@
     // 배열의 맨 첫번째 값과 맨 끝값을 가져와 출력해보세요.
 
     const arrLength = prompt('생성할 배열의 길이를 입력하세요.', 2);
-    
-    for (let i = 0; i < arrLength.length; i++) {
-      arrLength.slice()
-    }
-    
     console.log(arrLength);
     const arr = [];
-    console.log(arr);
+    
+    for (let i = 0; i < arrLength; i++) {
+      // prompt('배열에 넣을 데이터를 입력하세요.');
+      // arr.push(prompt('배열에 넣을 데이터를 입력하세요.'));
+      arr[i] = prompt('배열에 넣을 데이터를 입력하세요.');
+    }
+
+    if (arr.length > 0) {
+      document.write(arr.shift(), '<br>'); //첫번째
+      document.write(arr.pop(), '<br>'); //마지막
+    }
+    
 
 
     // 풀이5

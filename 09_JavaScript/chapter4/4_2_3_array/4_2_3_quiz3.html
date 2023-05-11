@@ -10,21 +10,23 @@
     // 먹기 싫은 과일을 입력받은 다음 과일을 담은 배열에서 찾아 제거하고 콘솔에 출력해보세요.
     // 입력한 과일이 배열에 없을 경우 '제거할 과일이 없습니다.' 라고 alert창을 띄운다.
 
-    const n = prompt('먹기 싫은 과일?', '');
     const fruits = ['사과', '바나나', '딸기', '포도', '두리안', '파인애플'];
+    
+    const n = prompt('먹기 싫은 과일?', '');
+    const nIndex = fruits.indexOf(n);
+    console.log(nIndex);
 
-    
-    
-    // if (fruits.splice(fruits)) {
-    //   console.log(fruits);  
+    if (nIndex === -1) {
+      alert('제거할 과일이 없습니다.');
       
-    // } else {
-    //   alert('제거할 과일이 없습니다');
-    // }
+    } else {
+      fruits.splice(nIndex, 1);
+
+    }
+    console.log(fruits);
+    
 
 
-    // if (!(fruits.splice(2,1))) {
-    // }
     // 풀이3
     
   </script>
