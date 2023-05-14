@@ -61,8 +61,8 @@
     document.write(tag, '<br>');
 
     const name = 'abc';
-    document.write(`hello ${1}`, '<br>');
-    document.write(`hello ${'name'}`, '<br>');
+    document.write(`hello ${1}`, '<br>'); //결과: hello 1 
+    document.write(`hello ${'name'}`, '<br>'); //결과: hello name 
     document.write(`hello ${name}`, '<br>');
     document.write('hello ' + name , '<br>'); //백틱 미사용 시
     document.write('<br>');
@@ -96,7 +96,7 @@
     // null : 저장된 데이터를 비우고자 할 때
     let val1;
     let val2 = 'hello';
-    document.write(val1, '<br>');
+    document.write(val1, '<br>'); //결과 : undefined
     document.write(val2, '<br>');
     val2 = null;
     document.write(val2, '<br>');
@@ -106,9 +106,9 @@
     // typeof: 저장된 자료형을 알고 싶을 때
     const num4 = 100;
     const str = '자바스크립트';
-    document.write(typeof num4, '<br>');
-    document.write(typeof str, '<br>');
-    document.write(typeof false, '<br>');
+    document.write(typeof num4, '<br>'); //결과:number
+    document.write(typeof str, '<br>');//결과:string
+    document.write(typeof false, '<br>');//결과:boolean
 
 
 
