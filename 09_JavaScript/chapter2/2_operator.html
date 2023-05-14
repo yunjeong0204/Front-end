@@ -38,18 +38,18 @@
     const t1 = '학교종이';
     const t2 = ' 땡땡땡 ';
     const t3 = 8282;
-    const t4 = ' 어서 모이자';
+    const t4 = ' 어서모이자';
     //(참고) 연산의 기본 방향 : 왼쪽에서 오른쪽으로
     result = t1 + t2 + t3 + t4;
     document.write(result, '<br>');
 
-    result = t1 + 100 + 200 + t4;
+    result = t1 + 100 + 200 + t4; //결과: 학교종이 100 200 어서모이자
     document.write(result, '<br>');
 
-    result = 100 + 200 + t1 + t4;
+    result = 100 + 200 + t1 + t4; //결과: 300 학교종이 어서모이자
     document.write(result, '<br>');
 
-    result = t1 + (100 + 200) + t4; //300나오게 하려고 괄호 
+    result = t1 + (100 + 200) + t4; //300나오게 하려고 괄호 (결과: 학교종이 300 어서모이자) 
     document.write(result, '<br>');
 
 
@@ -68,13 +68,13 @@
     num1 += num2; //num1 = num1 + num2;
     document.write(num1, '<br>');
 
-    num1 -= num2; //num1 = num1 - num2;
+    num1 -= num2; //num1 = num1 - num2; 그냥 num1 값
     document.write(num1, '<br>');
 
     num1 *= num2; //num1 = num1 * num2;
     document.write(num1, '<br>');
 
-    num1 /= num2; //num1 = num1 / num2;
+    num1 /= num2; //num1 = num1 / num2;  그냥 num1 값
     document.write(num1, '<br>');
 
     num1 %= num2; //num1 = num1 % num2;
@@ -140,21 +140,21 @@
     let f = '20'; //문자 20
     
     result = a > b; 
-    document.write(result, '<br>'); 
+    document.write(result, '<br>');  //false
     result = a < b; 
-    document.write(result, '<br>'); 
+    document.write(result, '<br>'); //true
     result = a <= b; 
-    document.write(result, '<br>'); 
+    document.write(result, '<br>'); //true
     result = b == f; // ==은 값만 비교 따라서 true가 나옴
-    document.write(result, '<br>'); 
+    document.write(result, '<br>'); //true
     result = b === f; //값과 타입까지 비교(권장)
-    document.write(result, '<br>'); 
+    document.write(result, '<br>'); //false
     result = a != b; 
-    document.write(result, '<br>'); 
+    document.write(result, '<br>'); //true
     result = b != f; //값만 비교
-    document.write(result, '<br>'); 
+    document.write(result, '<br>'); //false 
     result = b !== f; //값과 타입까지 비교(권장)
-    document.write(result, '<br>'); 
+    document.write(result, '<br>'); //true
 
 
     // 논리 연산자
