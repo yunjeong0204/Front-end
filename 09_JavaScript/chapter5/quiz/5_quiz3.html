@@ -13,9 +13,19 @@
     // 숫자는 1초 간격으로 출력되어야 합니다.
     // 힌트: setInterval(), clearInterval()을 이용
 
-    printNumber(5, 10) //5~10까지 1초 간격으로 출력
+    // printNumber(5, 10) //5~10까지 1초 간격으로 출력
     // 풀이3
-    
+    function printNumber(from, to) {
+      let num = from;
+      const count = setInterval(function() {
+        num ++;        
+        if (num > to) {
+          clearInterval();
+        }
+      }, 1000);
+    }
+    printNumber(5, 10) //5~10까지 1초 간격으로 출력
+
   </script>
 </head>
 <body>
