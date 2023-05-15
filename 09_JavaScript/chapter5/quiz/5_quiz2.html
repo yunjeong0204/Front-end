@@ -17,22 +17,37 @@
 
 
     // 풀이2
-    const x = prompt('x 입력','0');
-    const n = prompt('n 입력','0');
-    function pow(x, n) {
-    // x의 n 제곱은 x를 n번 곱해서 만들 수 있습니다.
-      let a = x; 
-      for (let i = 1; i < n; i++) {
-        if (n < 1) {
-          alert('자연수를 입력하세요');
-        } else {
-        document.write(pow(x,n));
-        }
-      }
+    // const x = prompt('x 입력','0');
+    // const n = prompt('n 입력','0');
+    // function pow(x, n) {
+    //   let a = x; 
+    //   for (let i = 1; i < n; i++) {
+    //     if (n < 1) {
+    //       alert('자연수를 입력하세요');
+    //     } else {
+    //     document.write(pow(x,n));
+    //     }
+    //   }
       
+    // }
+
+    function pow(x, n) {
+      let result = x;
+
+      // 반복문 사용
+      for (let i = 1; i < n; i++) {
+        result *= x;  
+      }
+      return result;
     }
 
-
+    const x = prompt('x?');
+    const n = prompt('n?');
+    if (n < 1) {
+      alert(`${n}은 양의 정수이어야 합니다`);
+    } else{
+      document.write(pow(x, n));
+    }
     
   </script>
 </head>
