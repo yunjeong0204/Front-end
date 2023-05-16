@@ -16,11 +16,11 @@
     for(var i = 0; i < 10; i++) {
       var leak = 'I am available outside of the loop'; //전역
     }
-    console.log(leak); //블록 스코프를 벗어나도 접근 가능
+    console.log(leak); //블록 스코프를 벗어나도 접근 가능 //결과: I am available outside of the loop
 
     function myFunc() {
       var functionScoped = 'I am availavle inside this function';
-      console.log(functionScoped);
+      console.log(functionScoped); //결과: I am availavle inside this function
     }
     myFunc();
     // console.log(functionScoped); //변수 없다고 에러뜸(함수를 벗어나면 접근 불가)
