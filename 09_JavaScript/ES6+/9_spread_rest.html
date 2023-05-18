@@ -98,6 +98,41 @@
     }
     console.log(classinfo1); //결과: {name: 'ab', age: 35, subject: 'web frontend'}
     console.log(classinfo2);//결과: {name: 'ab', age: 35, subject: 'web frontend', day: 'weekday'}
+
+
+    //2. ...레스트(rest, 나머지) 연산자 
+    // 생긴 것은 스프레드 연산자와 동일하지만 기능적으로는 정반대
+    // 스프레드는 '확장(펼치다)'하는 반면, 레스트는 나머지 여러 요소를 하나의 요소로 '압축'
+
+    // 1) 배열과 레스트
+    const runners = ['a', 'b', 'c', 'd', 'e'];
+    const [first, second, ...losers] = runners; //first = a, second = b, 레스트 연산자로 압축(c, d, e = losers)
+    console.log(losers); //결과: ['c', 'd', 'e']
+    console.log(...losers); //배열이 펼쳐져서 들어감<스프레드 연산자로 쓰임> //결과: c d e
+
+    // 2) 함수의 레스트 파라미터 
+    function sum(...args) { //[4, 5, 16, 25, 100] 배열로 받아짐
+      // console.log(args); //결과: [4, 5, 16, 25, 100] <배열로 받아지는 거 확인>
+      let sum = 0;
+      for(const arg of args) {
+        sum += arg;
+      }
+      return sum;
+    }
+    const result = sum(4, 5, 16, 25, 100); 
+    console.log(`합계: ${result}`); //결과: 150
+
+    // 3) 객체 리터럴과 레스트(ES2018부터 객체에도 적용됨)
+    const myobj = {
+      a: 1,
+      b: 3,
+      c: 5,
+      d: 7,
+      e: 9,
+    };
+    // 레스트 연산자를 사용하여 a, b를 제외한 나머지 속성을 변수 z에 할당
+    const {a, b, ...z} = myobj; //객체 분해 할당
+    console.log(z); //결과: {c: 5, d: 7, e: 9}
   </script>
 </head>
 <body>
