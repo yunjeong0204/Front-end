@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+    // 객체 리터럴 표기법의 변화(업그레이드)
+    // 1. 변수를 키와 값으로 하는 객체 만들기
+    const firstname = 'yj';
+    const lastname = 'ab';
+    const age = 25;
+    const nationality = 'korea';
+    // ES5
+    // const person1 = {
+    //   firstname: firstname,
+    //   lastname: lastname,
+    //   age: age,
+    //   nationality: nationality
+    // };
+    // console.log(person1); //결과: {firstname: 'yj', lastname: 'ab', age: 25, nationality: 'korea'}
+
+    // ES6에서 단순화
+    // 변수들의 이름이 객체 내의 속성명과 동일할 경우 생략 가능
+    const person2 = {
+      firstname,
+      lastname,
+      age,
+      nationality
+    };
+    console.log(person2); //결과: {firstname: 'yj', lastname: 'ab', age: 25, nationality: 'korea'}
+
+
+    
+    //2. 객체에 함수 추가하기 
+    // ES5
+    // const person3 = {
+    //   name: 'yj',
+    //   greet: function () {
+    //     console.log('hello'); //키 값 + 익명함수
+    //   }
+    // };
+    // person3.greet(); //결과: hello
+
+    // ES6
+    const person4 = {
+      name: 'yj',
+      greet () { //function 키워드 삭제, :를 지워서 기명함수로 만듦
+        console.log('hello'); 
+      }
+    };
+    person4.greet(); //결과: hello    
+
+
+    // 화살표 함수로 변경 시
+    // 에러: 익명 함수에 접근하기 위한 key가 필요
+    // const person5 = {
+    //   name: 'yj',
+    //   () => { 
+    //     console.log('hello'); 
+    //   }
+    // };
+    // person3.greet(); 결과: 에러
+
+    const person5 = {
+      name: 'yj',
+      greet: () => { 
+        console.log('hello'); 
+      }
+    };
+    person5.greet(); //결과: hello
+
+
+    // 3. 객체의 속성을 동적으로 정의하기
+    const name = 'myname';
+    // ES5
+    // //빈 객체를 생성
+    // const person6 =  {};
+    // // 객체를 업데이트(객체에 속성을 추가)
+    // person6[name] = 'yj'
+    // console.log(person6); //결과: {myname: 'yj'}
+    // // 객체를 먼저 생성한 다음 -> 수정
+
+    // ES6
+    // 객체 생성과 동시에 동적으로 속성 정의 가능
+    // 예: 키 값을 동적으로 받아와서 새로운 객체를 생성할 때 유용
+    const person7 ={
+      [name]: 'yj',
+    };
+    console.log(person7); //결과: {myname: 'yj'}
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
