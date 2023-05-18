@@ -12,20 +12,20 @@
     // 1. 객체 구조 분해 할당
     // 객체의 속성 값을 변수에 할당하려면?
     // ES5
-    var person1 = {
-      first: 'yj',
-      last: 'y'
-    };
-    var firstName = person1.first;
-    var lastName = person1.last;
-    console.log(firstName, lastName);
+    // var person1 = {
+    //   first: 'yj',
+    //   last: 'y'
+    // };
+    // var firstName = person1.first;
+    // var lastName = person1.last;
+    // console.log(firstName, lastName);
     // ES6
     const person2 = {
       first: 'yj',
       last: 'y'
     };
     const{first, last} = person2; //주의: 변수명은 key값과 동일하게 해야함
-    console.log(first,last);
+    console.log(first,last);//결과: yj y
     // 구조 분해 할당을 이용하여 person2가 가진 속성에 접근 + 해당 속성의 이름으로 변수 선언 및 값 할당이 가능함
 
     // 중첩된 객체 형태로 주어진 경우에도 동일하게 적용
