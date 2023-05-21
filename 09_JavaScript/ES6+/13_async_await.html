@@ -127,11 +127,8 @@
     }
     asyncFunc();
 
-    // Quiz: 앞의 프로미스 체이닝 예제3을 async/await로 리팩터링 하기
-    
-
-
-    const loginuser = (id, password) => {
+    // Quiz: 앞의 프로미스 체이닝 예제3을 async/await로 리팩터링 
+    function login(id2) {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
           if (id === 'abc' && password === '1234') {
@@ -141,8 +138,15 @@
           }
         }, 2000);
       });
+    }
+
+    async function login2() {
+      await setTimeout(() => {          
+      }, 2000);
     };
 
+
+    
     const getRoles = (userId) => {
       return new Promise((resolve, reject) => {
         setTimeout(() => {
