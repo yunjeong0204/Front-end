@@ -4,11 +4,12 @@ function LikeButton() {
   const [isClicked, setIsClicked] = React.useState(false);
   return React.createElement( 
     'button',
-    {onClick: () => setIsClicked(true)},
+    {onClick: () => setIsClicked(true)}, //상태 변경에 따라 재렌더링(앞으로는 DOM을 직접 제어하는 방식이 아닌 상태 변경을 이용)
     isClicked ? 'you liked this.' : 'Like'
-  );
+  ); //creatElement() 결과로 리액트 엘리먼트(일반 객체)
 };
 
 const domContainer = document.querySelector('#like_button_container');
 const root = ReactDOM.createRoot(domContainer);
 root.render(React.createElement(LikeButton));
+
