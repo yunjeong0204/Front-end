@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
+  <script>
+//     function hello(val) {
+//   return 'Hello ' + val;
+// }
+
+//   const hello2 = (val) => {
+//     return `hello ${val}`;
+//   };
+//모든 파일의 변경사항을 추적하도록 지정하고 stage(index) 영역에 올리는 명령어를 작성해보세요.
+// git add stage.txt
+
+
+
+// $ git config --global user.name "yj"
+// $ git config --global user.email @naver.com
+
+// $ git config user.name
+
+
+
+
+
+
+//아래 함수 선언문을 화살표 함수로 리팩터링 하세요.
+// map(): 기존 배열의 요소를 이용하여 새로운 배열을 만듦
+// const race = '100m dash';
+// const runners = ['Kim', 'Lee', 'Park'];
+
+// const results = runners.map(function (runner, index) {
+//   return {
+//     name: runner,
+//     race: race,
+//     place: index + 1
+//   };
+// });
+// console.log(results);
+
+
+// const results2 = (runner, index) => {
+//     return {
+//     name: runner,
+//     race: race,
+//     place: index + 1
+//   };
+// }
+// console.log(results2);
+
+
+// const a = runners.map((i, index) => {
+//   return i +  + index;
+// });
+// console.log(a);
+
+
+//아래 자기 소개(greeting)를 템플릿 리터럴을 사용하여 리팩터링 해보세요.
+// const name = 'JH Kim';
+// const age = 30;
+// const hobby = 'badminton';
+// const greeting = 'Hello my name is ' + name + '. I\'m ' + age + ' years old. My hobby is playing ' + hobby + '.';
+// const greeting2 = `hello my name is ${name}. I'm ${age} years old. my hobby is playing ${hobby}.`;
+// console.log(greeting2);
+
+//아래 액션 객체의 데이터들(type, id, title, content, done)을 구조 분해 할당 해보세요.
+// (한 번에 구조 분해 또는 여러 번에 걸쳐서 구조 분해하여도 상관없음)
+// const action = {
+//   type: 'action/name',
+//   payload: {
+//     id: '1',
+//     title: '메인 화면 구성하기',
+//     content: '메인 이미지와 아이템 목록 만들기',
+//     done: true
+//   }
+// };
+
+// const{type, payload: {id, title, content, done}} =action;
+// console.log(type, id, title, content, done);
+
+
+
+
+///아래와 같은 객체 구조에서 옵셔널 체이닝을 사용하여 대학 전공에 접근해보세요.
+// (optional 이라는 주석이 붙은 속성은 있을 수도 있고, 없을 수도 있는 선택적 속성임)
+// const person = {
+//   name: 'JH Kim',
+//   job: 'teacher',
+//   education: { // optional
+//     high_school: { // optional
+//       name: 'Songdo'
+//     },
+//     university: { // optional
+//       name: 'Incheon Hawaii',
+//       major: 'ICE'
+//     }
+//   }
+// };
+
+// const person2 = [person];
+// let universityMajor;
+// for (const p of person2) {
+//   universityMajor = p.education?.university?.major;
+// }
+// console.log(universityMajor);
+
+
+//보기에 주어진 객체를 복사하여 
+// 이메일 속성(email: 'geoblo@naver.com')이 추가된 새로운 객체를 만들어보세요.
+// const userInfo = {
+//     name: 'Goni Kim',
+//     age: 30
+// };
+
+// const userInfo2 = {
+//     name: 'Goni Kim',
+//     age: 30,
+//     email: 'geoblo@naver.com'
+// };
+
+// const{name, age, email} = userInfo2;
+// console.log(undefined, undefined, email);
+
+
+
+
+//보기에 주어진 회원 데이터에서 입력받은 id에 해당하는 멤버를 삭제한 새로운 배열을 만들어
+// 그 결과를 리턴하는 함수 deleteMember()를 만들어보세요.
+// 배열의 filter() 함수 사용
+
+// deleteMember('a3'); 호출 시 출력 결과는 아래와 같습니다.
+// [
+// { id: 'a1', name: 'Goni', age: 36 },
+// { id: 'a2', name: 'Pony', age: 32 },
+// { id: 'a4', name: 'Moly', age: 24 },
+// { id: 'a5', name: 'Noni', age: 45 }
+// ]
+
+// const members = [
+//     { id: 'a1', name: 'Goni', age: 36 },
+//     { id: 'a2', name: 'Pony', age: 32 },
+//     { id: 'a3', name: 'Tony', age: 12 },
+//     { id: 'a4', name: 'Moly', age: 24 },
+//     { id: 'a5', name: 'Noni', age: 45 }
+// ];
+
+// const deleteMember = () => {
+//   const a = members.filter((member) => {
+//     return member.id >
+//   })
+// }
+
+
+// 친구들에게 갚아야 할 돈을 배열로 만들어놨는데 실수로 0을 하나 더 붙였다.
+// 이대로 이체하면 거지가되니 빨리 0한자리를 뺀 새로운 배열을 다시 만든 후 출력해보세요.
+// 배열의 map() 함수 사용
+
+const moneyList = [2000000, 240000, 3000000, 1500];
+
+function money() {
+  for (let i = 0; i < moneyList.length; i++) {
+  moneyList.delete(0)
+}
+
+}
+console.log(money);
+  </script>
+</head>
+<body>
+  
+</body>
+</html>
