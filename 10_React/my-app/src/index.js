@@ -4,6 +4,12 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import JsxUse from './chaper3/3_4/JsxUse';
+import Library from './chaper3/Library';
+import Clock from './chaper4/Clock';
+import PropsUse from './chapter5/5.3/PropsUse';
+import Comment from './chapter5/Comment';
+import CommentList from './chapter5/CommentList';
+
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 //Root DOM Node에 렌더링 하도록 하는 함수 
@@ -15,8 +21,31 @@ root.render(
 );
 
 //3장 예제 
+// root.render(
+//   // <JsxUse />
+//   <Library />
+// );
+
+
+//4장 예제
+// 1초마다 Clock 컴포넌트를 렌더링 하는 코드 -> setInterval사용
+// (참고로 실제 개발에서 이렇게 쓰는 경우는 없음)
+// setInterval(() => {
+//   root.render(
+//     <Clock /> //자동완성 
+//   );  
+// }, 1000);
+
+
+// 5장 예제
+// root.render(
+//   <PropsUse /> 
+// );  
+
+
+// 5장
 root.render(
-  <JsxUse />
+  <CommentList />
 );
 
 
