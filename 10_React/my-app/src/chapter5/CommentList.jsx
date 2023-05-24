@@ -18,9 +18,6 @@ const comments = [
     name: '이름4',
     content: '설명4'
   }, 
-
-
-
 ]
 
 //댓글들을 포함하는 CommentList 컴포넌트
@@ -47,7 +44,7 @@ function CommentList(props) {
         // ex
         // [1, 2, 3].map(element => element *10)
         // [10, 20 30]
-        
+      
       }
     </div>
 
