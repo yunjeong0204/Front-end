@@ -12,6 +12,7 @@ import CommentList from './chapter5/CommentList';
 import NotificationList from './chapter6/NotificationList';
 import Conuter from './chapter7/7.2/Counter';
 import SetStateMerge from './chapter7/7.2/SetStateMerge';
+import CounterEffect from './chapter7/7.3/ex1/CounterEffect';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -51,20 +52,30 @@ root.render(
 //   <CommentList />
 // );
 
+
 // 6장 
 // root.render(
 //   <NotificationList /> 
 // );  
+
 
 // 7장 7.2 -> Counter.jsx
 // root.render(
 //   <Conuter />
 // );
 
+
 // 7장 7.2 -> SetStateMerge.jsx
+// root.render(
+//   <SetStateMerge />
+// );
+
+
+// 7장 7.3 -> ex1 -> CounterEffect.jsx
 root.render(
-  <SetStateMerge />
+  <CounterEffect />
 );
+
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
