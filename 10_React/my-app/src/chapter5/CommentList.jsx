@@ -39,12 +39,17 @@ function CommentList(props) {
         );
       })}
 
+      {/* 코드 간소화 */}
+      {comments.map(comment => <Comment name={comment.name} content={comment.content}/>)}
+
       {/* map()함수의 결과 */}
       {
-        // ex
-        // [1, 2, 3].map(element => element *10)
-        // [10, 20 30]
-      
+        [
+          <Comment name={'이름1'} content={'설명1'}/>,
+          <Comment name={'이름2'} content={'설명2'}/>,
+          <Comment name={'이름3'} content={'설명3'}/>,
+          <Comment name={'이름4'} content={'설명4'}/>,
+        ]
       }
     </div>
 

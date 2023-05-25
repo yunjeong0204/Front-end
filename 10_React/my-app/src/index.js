@@ -9,6 +9,7 @@ import Clock from './chaper4/Clock';
 import PropsUse from './chapter5/5.3/PropsUse';
 import Comment from './chapter5/Comment';
 import CommentList from './chapter5/CommentList';
+import NotificationList from './chapter6/NotificationList';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -44,9 +45,14 @@ root.render(
 
 
 // 5장
+// root.render(
+//   <CommentList />
+// );
+
+// 6장 
 root.render(
-  <CommentList />
-);
+  <NotificationList /> 
+);  
 
 
 // If you want to start measuring performance in your app, pass a function
