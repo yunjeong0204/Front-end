@@ -10,6 +10,8 @@ import PropsUse from './chapter5/5.3/PropsUse';
 import Comment from './chapter5/Comment';
 import CommentList from './chapter5/CommentList';
 import NotificationList from './chapter6/NotificationList';
+import Conuter from './chapter7/7.2/Counter';
+import SetStateMerge from './chapter7/7.2/SetStateMerge';
 
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
@@ -50,10 +52,19 @@ root.render(
 // );
 
 // 6장 
-root.render(
-  <NotificationList /> 
-);  
+// root.render(
+//   <NotificationList /> 
+// );  
 
+// 7장 7.2 -> Counter.jsx
+// root.render(
+//   <Conuter />
+// );
+
+// 7장 7.2 -> SetStateMerge.jsx
+root.render(
+  <SetStateMerge />
+);
 
 // If you want to start measuring performance in your app, pass a function
 // to log results (for example: reportWebVitals(console.log))
