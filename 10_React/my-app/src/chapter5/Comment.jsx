@@ -44,12 +44,10 @@ function Comment(props) {
           style={styles.image}/>
       </div>
 
+      <div style={styles.contentContainer}>
       {/* 댓글 작성자와 내용 */}
       {/* quiz: 작성자와 내용을 동적으로 받아서 출력하도록 props 사용하기 
       (key값은 name과 content 전달할 예정*/}
-      <div style={styles.contentContainer}>
-        {/* <span style={styles.nameText}>염윤정</span>
-        <span style={styles.contentText}>제가 만든 첫 컴포넌트입니다</span> */}
         <span style={styles.nameText}>{props.name}</span>
         <span style={styles.contentText}>{props.content}</span>
       </div>
