@@ -38,7 +38,7 @@ root.render(
   // <CommentList />
 
   // 6장 예제
-  // <NotificationList />
+  <NotificationList />
   
   // 7장 예제
   // <Counter />
@@ -56,7 +56,7 @@ root.render(
 
   // 9장 예제
   // <Greeting isLoggedIn={true}/> // {true} 로그인을 했다
-  <LoginControl />
+  // <LoginControl />
 );
 
 
