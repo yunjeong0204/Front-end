@@ -1,3 +1,5 @@
+// Book 컴포넌트를 사용하는 상위 컴포넌트
+
 import Book from "./Book"; //Book 컴포넌트 가져오기(자동완성 사용 권장)
 
 function Library() {
