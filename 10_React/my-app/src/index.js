@@ -77,8 +77,8 @@ root.render(
 
   // 10장 예제
   // <NumberList numbers={[1, 2, 3, 4, 5]}/>
-  <ListKey />
-  // <AttendanceBook />
+  // <ListKey />
+  <AttendanceBook />
 );
 
 
