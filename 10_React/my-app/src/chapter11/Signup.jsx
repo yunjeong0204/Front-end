@@ -21,7 +21,7 @@ import React, { useState } from 'react';
 
 function Signup(props) {
   const [name, setname] = useState('');
-  const [gender, setgender] = useState('');
+  const [gender, setgender] = useState('남자');
 
   // 1. 이름
   const handleChangeName = (e) => {
@@ -44,15 +44,21 @@ function Signup(props) {
       <label>
         이름:
         <input type="text" value={name} onChange={handleChangeName}/>
+      </label>
 
+      <br />
+
+      <label htmlFor="">
+        성별:
         <select value={gender} onChange={handleChangeGender}>
           <option value="남자">남자</option>
           <option value="여자">여자</option>
         </select>
-
       </label>
 
-      <button>출력</button>
+      <br />
+
+      <button type='submit'>출력</button>
     </form>
   );
 }
