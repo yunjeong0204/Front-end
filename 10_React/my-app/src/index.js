@@ -39,6 +39,16 @@ import Reservation from './chapter11/11.4/Reservation';
 import ReservationRefactoring from './chapter11/11.4/ReservationRefactoring';
 import Signup from './chapter11/Signup';
 import SignupRectoring from './chapter11/SignupRefactoring';
+import UnitCounter from './chapter12/UnitCounter';
+import UnitCalculator from './chapter12/UnitCalculator';
+import WelcomeDialog from './chapter13/13.1.1.1/WelcomeDialog';
+import SplitPaneSection from './chapter13/13.1.1.2/SplitPaneSection';
+import Dialog from './chapter13/13.1.2/Dialog';
+import DialogContainer from './chapter13/13.1.2/DialogContainer';
+import SingUpDialog from './chapter13/13.1.3/SingUpDialog';
+import Card from './chapter13/Card';
+import ProfileCard from './chapter13/ProfileCard';
+import DarkOrLight from './chapter14/DarkOrLight';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root DOM Node에 렌더링 하도록 하는 함수
@@ -100,7 +110,18 @@ root.render(
   // <Reservation />
   // <ReservationRefactoring />
   // <Signup />
-  <SignupRectoring />
+  // <SignupRectoring />
+
+  // 12장 예제
+  // <UnitCalculator />
+
+  // 13장 예제
+  // <WelcomeDialog />
+  // <SplitPaneSection />
+  // <DialogContainer />
+  // <SingUpDialog />
+  // <ProfileCard />
+  <DarkOrLight />
 );
 
 
