@@ -22,10 +22,43 @@ import Mybutton from './chapter8/8.2/Mybutton';
 import ConfirmButton from './chapter8/ConfirmButton';
 import Greeting from './chapter9/9.1/Greetinh';
 import LoginControl from './chapter9/9.2/LoginControl';
+import Mailbox from './chapter9/9.3/Mailbox';
+import LoginControlRefactoring from './chapter9/9.3/LoginControlRefactoring';
+import MainPage from './chapter9/9.4/MainPage';
+import Landing from './chapter9/Landing';
+import NumberList from './chapter10/10.1/NumberList';
+import ListKey from './chapter10/10.2/ListKey';
+import AttendanceBook from './chapter10/AttendanceBook';
+import NameForm from './chapter11/11.2/NameForm';
+import EssayForm from './chapter11/11.3/EssayForm';
+import FlavorForm from './chapter11/11.3/FlavorForm';
+import Textinputwithfocusbutton from './chapter7/7.6/Textinputwithfocusbutton';
+import Fileinput from './chapter11/11.3/Fileinput';
+import Componentvariable from './chapter7/7.6/Componentvariable';
+import Reservation from './chapter11/11.4/Reservation';
+import ReservationRefactoring from './chapter11/11.4/ReservationRefactoring';
+import Signup from './chapter11/Signup';
+import SignupRectoring from './chapter11/SignupRefactoring';
+import UnitCounter from './chapter12/UnitCounter';
+import UnitCalculator from './chapter12/UnitCalculator';
+import WelcomeDialog from './chapter13/13.1.1.1/WelcomeDialog';
+import SplitPaneSection from './chapter13/13.1.1.2/SplitPaneSection';
+import Dialog from './chapter13/13.1.2/Dialog';
+import DialogContainer from './chapter13/13.1.2/DialogContainer';
+import SingUpDialog from './chapter13/13.1.3/SingUpDialog';
+import Card from './chapter13/Card';
+import ProfileCard from './chapter13/ProfileCard';
+import DarkOrLight from './chapter14/DarkOrLight';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 // Root DOM Node에 렌더링 하도록 하는 함수
 // 처음으로 렌더링할 컴포넌트를 지정하는데 App 컴포넌트가 기본적으로 들어가있음
+
+
+// 9장 예제 Mailbox
+const messages = ['React', 'Re:React', 'Re:Re: React'];
+
+
 root.render(
   // <App />
 
@@ -48,6 +81,8 @@ root.render(
   // <EffectContainer />
   // <Timer />
   // <TimerContainer />
+  // <Textinputwithfocusbutton />
+  // <Componentvariable />
 
   // 8장 예제
   // <Toggle />
@@ -56,8 +91,43 @@ root.render(
 
   // 9장 예제
   // <Greeting isLoggedIn={true}/> // {true} 로그인을 했다
+<<<<<<< HEAD
   <LoginControl />
+=======
+  // <LoginControl />
+  // <Mailbox unreadMessages={messages}/> // props 속성 넘기기
+  // <LoginControlRefactoring />
+  // <MainPage />
+  // <Landing />
+
+  // 10장 예제
+  // <NumberList numbers={[1, 2, 3, 4, 5]}/>
+  // <ListKey />
+  // <AttendanceBook />
+
+  // 11장 예제
+  // <NameForm />
+  // <EssayForm />
+  // <FlavorForm />
+  // <Fileinput />
+  // <Reservation />
+  // <ReservationRefactoring />
+  // <Signup />
+  // <SignupRectoring />
+
+  // 12장 예제
+  // <UnitCalculator />
+
+  // 13장 예제
+  // <WelcomeDialog />
+  // <SplitPaneSection />
+  // <DialogContainer />
+  // <SingUpDialog />
+  // <ProfileCard />
+  <DarkOrLight />
+>>>>>>> 09d4e7bb1f93b10afddca9cd0d13d198c03f5f87
 );
+
 
 
 // 4장 예제

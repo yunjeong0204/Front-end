@@ -13,7 +13,8 @@ function LogoutButton(props) {
   );
 }
 
-function LoginControl(props) {
+function LoginControlRefactoring(props) {
+  // 초기값을 false로 해놔서 계속 로그아웃 상태임 
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const handleLoginClick = () => {
@@ -24,20 +25,16 @@ function LoginControl(props) {
     setIsLoggedIn(false);
   };
 
-  let button;
-  // 이 예제의 포인트
-  // button 변수에 컴포넌트 대입(결과적으로는 리액트 엘리먼트 저장됨)
-  if (isLoggedIn) {
-    button = <LogoutButton onClick={handleLogoutClick}/>;
-  } else{
-    button = <LoginButton onClick={handleLoginClick}/>;
-  }
-
   return (
     <div>
       <Greeting isLogginIn={isLoggedIn}/>
-      {button}
+      {/* 삼항 연산자로 if-else 구문을 JSX 내부에서 구현 */}
+      {/* 조건에 따라 각기 다른 엘리먼트를 렌더링하고 싶을 때 사용 */}
+      {isLoggedIn
+        ? <LogoutButton onClick={handleLogoutClick} />
+        : <LoginButton onClick={handleLoginClick}/>
+      }
     </div>
   );
 }
-export default LoginControl;
+export default LoginControlRefactoring;

@@ -12,7 +12,10 @@ function ConfirmButton() {
   return(
     // disabled={isConfirmed} >> 버튼 비활성화 하기
     <button type="button" onClick={handleConfirm} disabled={isConfirmed}>
-      {isConfirmed ? '확인됨' : '확인하기'}
+      {isConfirmed 
+        ? '확인됨' 
+        : '확인하기'
+        }
     </button>
 
     
