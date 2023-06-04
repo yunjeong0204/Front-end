@@ -91,9 +91,6 @@ root.render(
 
   // 9장 예제
   // <Greeting isLoggedIn={true}/> // {true} 로그인을 했다
-<<<<<<< HEAD
-  <LoginControl />
-=======
   // <LoginControl />
   // <Mailbox unreadMessages={messages}/> // props 속성 넘기기
   // <LoginControlRefactoring />
@@ -125,7 +122,6 @@ root.render(
   // <SingUpDialog />
   // <ProfileCard />
   <DarkOrLight />
->>>>>>> 09d4e7bb1f93b10afddca9cd0d13d198c03f5f87
 );
 
 
