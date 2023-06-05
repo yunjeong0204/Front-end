@@ -11,3 +11,50 @@
 
 Containment(컴포넌트에서 다른 컴포넌트를 담기)
 • props에 기본적으로 들어있는 children 속성을 사용
+
+<chapter15>
+스타일 사용하기
+: styled.주고싶은곳``
+매개변수로 props로 줌
+width: ${props => props.width};
+width: ${props => props.width || '100px'};
+height: ${props => props.height || '40px'};
+color: ${props => props.dark ? 'white' : 'black'}; props.dark가 ture면 white값
+background: ${props => props.dark ? 'black' : 'white'};
+<Button width="200px" height="60px">Nornal</Button>
+버튼에 width, height값을 안 줬을 때 100px, 40px이 들어감
+<Button dark={true}>Dark</Button> 
+버튼에 dark ture값을 주었기때문에 white css 적용
+/* 4. 여러 줄의 스타일 구문을 조건부로 설정해야 하는 경우 css를 불러와 사용해야한다 */
+/* props.inverted가 true일 때 스타일 적용 */
+${props => 
+  props.inverted && 
+  css`
+    background: white;
+    color: #1f1f1f;
+    border: 2px solid white;
+    &:hover{
+      background: #1f1f1f;
+      color: white;
+    }
+`}
+<Button inverted>Invered</Button>
+버튼에 inverted값을 주었기 때문에(true값을 준거임 그래서 스타일이 적용이된다)
+
+23.06.05
+<chapter7> useCallback
+
+
+------------------------------
+10_React> my-todo만들기
+새로운 React앱 만들기
+경로 : npx create-react-app <your-project-name>
+- App.js 설명보기
+- package.json에서 설치가 됐는지 확인가능
+
+렌더링을 App.js에서 하기
+
+console.log(props.todos); //props는 객체 todos는 배열 -> 객체안 배열 담는 법
+
+
+
