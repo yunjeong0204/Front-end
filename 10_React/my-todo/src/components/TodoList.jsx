@@ -13,7 +13,12 @@ const TodoListWrapper = styled.div`
 // todos 배열을 props로 받아와서 map()함수를 사용해 여러 개의 TodoListItem 컴포넌트로 변환해 보여줌
 function TodoList(props) {
   // console.log(props.todos); //props는 객체 todos는 배열 -> 객체안 배열 담는 법
-  const { todos } = props;
+
+  const {todos, onRemove, onToggle} = props;
+  // onToggle로 받았으니 onToggle로 넣기
+
+  // const { todos } = props; //Quiz: TodoListItem으로 이루어진 배열로 반환하여 반복렌더링
+
   return (
     <TodoListWrapper>
       {/* <TodoListItem/>
@@ -23,7 +28,8 @@ function TodoList(props) {
       {/* Quiz: TodoListItem으로 이루어진 배열로 반환하여 반복렌더링 하기 */}
       {/* 위에서 구조 분해 할당을 함 따라서  props.todos를 안 해도 됨 */}
       {todos.map((todo) => (
-        <TodoListItem key = {todo.id} todo={todo}/>
+        <TodoListItem key = {todo.id} todo={todo} onRemove={onRemove}
+        onToggle={onToggle}/> //onToggle로 받았으니 onToggle로 넣기
       ))}
 
     </TodoListWrapper>

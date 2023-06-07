@@ -10,7 +10,7 @@ const TodoTemplateWrapper = styled.div`
 
   /* 컴포넌트를 따로 만들어도 되고 아니면 내부에 class로 만들어도 됨 */
   /* 자손을 의미 */
-  .app-title{
+  .app-title{ //일정관리
     background: #22b8cf;
     color: white;
     height: 4rem;
