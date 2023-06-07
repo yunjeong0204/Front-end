@@ -99,3 +99,10 @@ url에서 쿼리스트링을 가져오는 편안 훅이 있다.
 /about?detail=true&mode=1 ->
 detail: true
 mode: 1 이 나옴
+
+NoMathchPage.jsx
+{/* 위의 설정한 라우팅 경로 이외에 경우 */}
+<Route path='*'/> {/* *의 의미는 match anything */}
+경로에 없는 거 칠 때 나오게 하는 것
+ㅁ
+
