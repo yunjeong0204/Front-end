@@ -54,11 +54,48 @@ ${props =>
 
 렌더링을 App.js에서 하기
 
-console.log(props.todos); //props는 객체 todos는 배열 -> 객체안 배열 담는 법
+console.log(props.todos); //props는 객체, todos는 배열 -> 객체안 배열 담는 법
 
 
 {/* Quiz: TodoListItem으로 이루어진 배열로 반환하여 반복렌더링 하기 */}
-공부하기
 
 
+color: ${props => props.checked && '#22b8cf'};
+props.checked가 true면 스타일 적용함
 
+제어 컴포넌트 만들기 
+const [value, setValue] = useState('');
+
+const handleChange = (e) => {
+  setValue(e.target.value);
+};
+
+
+state는 렌더링과 관련된 것만 넣는다
+
+페키지 설치
+npm install uuid
+App.js에서 import {v4 us uuidv4 } from "uuid"; 별칭을 uuidv4라고 줘서 별칭사용해야함
+App.js - const todo -> id를 id: uuidv4()로 바꾸기
+
+
+--------------------
+<chapter16>
+simpleRouter.jsx
+<Route index element={<MainPage />}/> : index 속성에 메인페이지 연결됨
+{/* path는 경로를 의미 */}
+<Route path='/games' element={<GamePage />} /> {/* /games로 접속하면 GamePage컴포넌트가 렌더링 */}
+: localhost:3000/games라고 쓰면 GamePage가 보여짐
+
+MainPage.jsx
+Link 컴포넌트 = a태그
+
+GamePage.jsx
+{/* Outlet: Nested Route의 자식 엘리먼트를 보여주는 역할 */}
+<Outlet /> 은 한 번만 사용가능
+
+AboutPage.jsx
+url에서 쿼리스트링을 가져오는 편안 훅이 있다.
+/about?detail=true&mode=1 ->
+detail: true
+mode: 1 이 나옴
