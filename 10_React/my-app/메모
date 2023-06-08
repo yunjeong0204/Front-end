@@ -104,5 +104,37 @@ NoMathchPage.jsx
 {/* 위의 설정한 라우팅 경로 이외에 경우 */}
 <Route path='*'/> {/* *의 의미는 match anything */}
 경로에 없는 거 칠 때 나오게 하는 것
-ㅁ
+
+
+---------------------------
+자바스크립트 공부하기 좋은 곳 
+: https://ko.javascript.info/
+---------------------------
+my-blog 마이블로그 만들기
+- data.json
+- App.js에서 렌더링하여 실행시키기
+글 작성하기 버튼 누르면 post-write경로로 가야한다
+1) Button.jsx
+2) textInput.jsx
+3) postListItem.jsx
+4) PostList.jsx
+렌더링할 때 필요한 속성 -> key속성
+5) CommentListItem.jsx
+6) CommentList.jsx
+7) MainPage.jsx
+8) postwritepage.jsx
+<Route path="/post-write" element={<PostWritePage />} />
+9)postviewpage.jsx
+
+-------------------------
+미입력시 버튼 비활성화 또는 눌렀을때 엔터를 쳤을 때 유효성 검사 후 경고띄우기(추가가되면안됨)
+날짜도 같이 기록(디데이표시)
+할일이 몇개인지 표시(전체, 완료, 미완료)
+완료된 일은 밑으로 내리기
+중요한 일은 핀 고정 버튼 누르면 상위로 올라감
+할일 목록 정렬 기능
+테마적용(다크, 라이트모드)
+드래그 앤 드랍 적용
+할일수정기능
+
 
