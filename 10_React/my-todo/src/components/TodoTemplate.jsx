@@ -23,6 +23,7 @@ const TodoTemplateWrapper = styled.div`
   .content{
     background: white;
   }
+
   `;
 
 

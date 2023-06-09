@@ -27,6 +27,12 @@ function TodoList(props) {
 
       {/* Quiz: TodoListItem으로 이루어진 배열로 반환하여 반복렌더링 하기 */}
       {/* 위에서 구조 분해 할당을 함 따라서  props.todos를 안 해도 됨 */}
+      {/* {todos.map((todo) => {
+        return(
+          <TodoListItem key = {todo.id} todo={todo} onRemove={onRemove} onToggle={onToggle}/>
+        )
+      })} */}
+
       {todos.map((todo) => (
         <TodoListItem key = {todo.id} todo={todo} onRemove={onRemove}
         onToggle={onToggle}/> //onToggle로 받았으니 onToggle로 넣기

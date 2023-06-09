@@ -126,14 +126,16 @@ root.render(
   // <DialogContainer />
   // <SingUpDialog />
   // <ProfileCard />
-  // <DarkOrLight />
+
+  // 14장 예제
+  <DarkOrLight />
 
   // 15장 예제
   // <StyledPage />
   // <ThemeApp />
 
   // 16장 예제
-  <SimpleRouter />
+  // <SimpleRouter />
 );
 
 
