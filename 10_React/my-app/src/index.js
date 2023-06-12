@@ -128,14 +128,14 @@ root.render(
   // <ProfileCard />
 
   // 14장 예제
-  <DarkOrLight />
+  // <DarkOrLight />
 
   // 15장 예제
   // <StyledPage />
   // <ThemeApp />
 
   // 16장 예제
-  // <SimpleRouter />
+  <SimpleRouter />
 );
 
 
