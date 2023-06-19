@@ -138,3 +138,23 @@ my-blog 마이블로그 만들기
 할일수정기능
 
 
+chapter17
+Apirequests.jsx
+º jsonplaceholder - https://jsonplaceholder.typicode.com/
+
+
+
+<my-news>
+Your API key is: a07a850b68d64c57b01428fb75a458a9
+1) newsitem.jsx
+  <a href={url} target='_blank'> - 새창으로 띄우는 거 _blank
+2) newslist.jsx
+3) categories.jsx
+4) NewsPage.jsx
+  ㄴ App.js
+
+2) newslist.jsx -> const {category = 'all'} = useParams(); //구조분해할당
+2) newslist.jsx -> 카테고리가 all일 때는 아무것도 들어가면 안되고(공백도 있으면 안 됨), 그 외엔 %category= 해당 카테고리 값 넣기 
+useEffect()에서 의존성배열에 카테고리를 넣어야함
+3) categories.jsx -> 현재 선택된 카테고리 값에 스타일 적용 
+
