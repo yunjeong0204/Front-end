@@ -158,3 +158,6 @@ Your API key is: a07a850b68d64c57b01428fb75a458a9
 useEffect()에서 의존성배열에 카테고리를 넣어야함
 3) categories.jsx -> 현재 선택된 카테고리 값에 스타일 적용 
 
+
+
+영화 API
