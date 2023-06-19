@@ -11,6 +11,7 @@ function App() {
     // </>
 
     // index.js에서 <BrowserRouter>를 미리써놔서 Routes부터 사용하면 됨
+
     <Routes>
       {/* ?는 categoty 값이 선택적이라는 의미.
         즉, 있을 수도 있고, 없을 수도 있다는 뜻

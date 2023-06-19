@@ -38,8 +38,6 @@ function ApiRequest(props) {
     };
   };
 
-
-
   return (
     <>
       <div>
@@ -59,7 +57,6 @@ function ApiRequest(props) {
 }
 
 export default ApiRequest;
-
 // 서버에 데이터 요청
 // 서버: 데이터 달라고 하면 데이터 주는 애
 // 데이터: html, css, js 또는 JSON 데이터 등
