@@ -159,5 +159,31 @@ useEffect()에서 의존성배열에 카테고리를 넣어야함
 3) categories.jsx -> 현재 선택된 카테고리 값에 스타일 적용 
 
 
-
 영화 API
+
+
+<chapter18> 순서
+1) CounterApp.js 
+리덕스 설정하기 스토어 만들기
+2) store.js - (Redux DevTools는 크롬 웹 스토어에서 따로 설치!)
+3) index.js 
+import provider하기
+store.js에서 store라고 변수 설정해서 스토어라는 props에 전달
+4) counterSlice.js
+3) reducer안 내용 넣기
+5) Counter.js 실행할 컴포넌트 만들기
+1) CounterApp.js - <Counter /> 넣음 
+5) Counter.js const dispatch = useDispatch() 버튼 onClick
+하고 실행결과 보기
+5) Counter.js input만들기
+4) counterSlice.js incrememtByAmount리듀서 만들기 -> 만들었으면 export해주기
+5) Counter.js 버튼 onClick incrememtByAmount넣기
+--
+상품추가만들기
+ProductList.js
+productSlice.js
+store.js에서 만든 거 추가해야함
+
+
+
+
