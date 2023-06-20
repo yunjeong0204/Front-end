@@ -2,6 +2,7 @@ import axios from 'axios';
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
+// 복습 jsx
 function Jsonplaceholder(props) {
   const ListBlock = styled.div`
     width: 768px;
