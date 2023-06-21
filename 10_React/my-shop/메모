@@ -1,0 +1,13 @@
+<my-shop> 순서
+https://react-bootstrap.netlify.app/
+1)- App.js
+GlobalSty만들기 
+2) Header.js
+3) Main.js했으면 - App.js에서 라우팅하기
+4) store.js 리덕스를 쓰려면 스토어를 만들어야함
+5) productSlice.js - slice에서 정의만 했기때문에 store.js에서 등록해주기
+전역상태만들기(Slice)
+
+
+ProductListItem.js
+ProductDetail.js 상세번호누르면 넘어가는 페이지
