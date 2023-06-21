@@ -20,6 +20,7 @@ export default CounterApp;
 // Redux Toolkit and React-Redux 설치하기
 // npm install @reduxjs/toolkit react-redux
 
+
 // 만약에 카운터의 state가 여기저기 컴포넌트에서 공유가 필요하다면 어디에 만들어야할까?
 // 공통 부모에 만들고 props로 자식에게 전달해야 됨(state 끌어올리기)
 
