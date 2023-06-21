@@ -179,11 +179,5 @@ store.js에서 store라고 변수 설정해서 스토어라는 props에 전달
 4) counterSlice.js incrememtByAmount리듀서 만들기 -> 만들었으면 export해주기
 5) Counter.js 버튼 onClick incrememtByAmount넣기
 --
-상품추가만들기
-ProductList.js
-productSlice.js
+상품추가만들기 ProductList.js, productSlice.js
 store.js에서 만든 거 추가해야함
-
-
-
-
