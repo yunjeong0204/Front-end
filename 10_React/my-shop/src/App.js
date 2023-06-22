@@ -1,8 +1,12 @@
 import { createGlobalStyle } from "styled-components";
-import 'bootstrap/dist/css/bootstrap.min.css'; //bootstrap CSS 추가
-import { Button, Container, Nav, Navbar } from "react-bootstrap";
-import Header from "./pages/Header";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
+import { Button, Container, Nav, Navbar } from "react-bootstrap";
+import { ToastContainer } from "react-toastify";
+
+import 'bootstrap/dist/css/bootstrap.min.css'; //bootstrap CSS 추가
+import 'react-toastify/dist/ReactToastify.min.css'; // ReactToastify CSS 추간
+
+import Header from "./pages/Header";
 import Main from "./pages/Main";
 import ProductDetail from "./pages/ProductDetail";
 
@@ -47,6 +51,13 @@ function App() {
           
         </Route>
       </Routes>
+
+      <ToastContainer 
+        position="top-right" //알람위치지정
+        autoClose={2000} //자동 off 시간
+        pauseOnFocusLoss={false} //화면 벗어나면 알람 정지
+        theme="dark" //테마
+      />
 
     </>
   );

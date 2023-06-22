@@ -11,3 +11,31 @@ GlobalSty만들기
 
 ProductListItem.js
 ProductDetail.js 상세번호누르면 넘어가는 페이지
+
+홈에서 상품누르면 상품이름, 설명, 주문하기까지 만들고 나서
+
+productDetail.js 
+- Alert깜빡거리게 만들기 키프레임사용
+- 주문수량 입력: 가격과 주문하기 사이에 수량 폼 만들기, 제어 컴포넌트 사용(usf onChange) 
+isNaN사용해서 form창에 숫자입력은 되나 문자입력은 안되게 만듦
+하지만 사용자에게 알려주면 좋으니까 react-toastify사이트에서 가져오고 사용
+npm install --save react-toastify 설치하기 css import해주기(App.js에서)
+App.js에서 <ToastContainer /> 써주기 - 맨 아래에 씀 
+주문수량 입력에서 가져온 Toast.error써주기
+- main.js 상품 더보기 버튼 api요청하고
+productSlice.js에서 만든 버튼 리팩터링하기
+- productAPI.js상품과 관련된 api 넣으면됨
+더보기 버튼이 두갠데 두번째 더보기버튼은 그냥 리팩터링한 거 뿐 기능은 같다.
+-productSlice.js 
+createAsyncThunk()함수 사용
+extraReducers 리듀서 사용
+initialState에 state값 줌
+main.js이동 handleGetMoreProductsAsync만들어줌
+productSlice에서 selectStatus -> Main에서
+react-spinners검색 후 설치
+npm install --save react-spinners
+로딩창 만들어줌
+
+- 탭 UI 만들기
+: productDetail.js
+UI를 동적한다 -> 무조건 state만들기 usf
