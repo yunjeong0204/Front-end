@@ -14,6 +14,7 @@ import { useEffect } from 'react';
 import { getAllProducts, getMoreProducts, getMoreProductsAsync, selectProductList, selectStatus } from '../features/product/productSlice';
 import ProductListItem from '../components/ProductListItem';
 import { getProducts } from '../api/productAPI';
+import LatestView from '../components/LatestView';
 
 const MainBackground = styled.div`
   height: 500px;
@@ -139,6 +140,9 @@ function Main(props) {
         </Button>
 
       </section>
+
+      {/* 최근 본 상품 렌더링 */}
+      <LatestView />
 
 
     </>

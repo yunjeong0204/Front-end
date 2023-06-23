@@ -39,3 +39,22 @@ npm install --save react-spinners
 - 탭 UI 만들기
 : productDetail.js
 UI를 동적한다 -> 무조건 state만들기 usf
+
+- 렌더링 다 되고 마지막에 useEffect실행
+- 상세페이지가 언마운트될 때 전역상태 초기화 ProductDetail.js에서
+productSlice.js에서 slice만들고 export해주고 다시 productDetail로 넘어와서 dispatch해주기
+
+-장바구니 만들기
+cart.js
+cartSlice.js
+cart.js
+store.js - 전역스토어에 리듀서함수들 등록하기
+
+- 장바구니 누르면 상품 담아지는 거 만들기: 모달창 만들기 
+: productDetail.js
+
+삭제 만들고 제거되게 하기
+payload로 받아서 해보기
+
+- 최근 본 상품 구현하기
+LatestView.js

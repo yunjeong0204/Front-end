@@ -1,15 +1,16 @@
 import React, { useState } from 'react';
 import { useEffect } from 'react';
-import { Alert, Button, Col, Container, Form, Nav, Row } from 'react-bootstrap';
-import { useParams } from 'react-router-dom';
+import { Alert, Button, Col, Container, Form, Modal, Nav, Row } from 'react-bootstrap';
+import { useNavigate, useParams } from 'react-router-dom';
 
 //서버에서 받아온 데이터라고 가정
 import data from "../data.json";
 import { useDispatch, useSelector } from 'react-redux';
-import { getSelectedProducts, selectSelectedProduct } from '../features/product/productSlice';
+import { clearSelectedProduct, getSelectedProducts, selectSelectedProduct } from '../features/product/productSlice';
 import styled, { keyframes } from 'styled-components';
 import { toast } from 'react-toastify';
 import TabContents from '../components/TabContents';
+import { addItemToCart } from '../features/cart/cartSlice';
 
 // alert창 깜빡깜빡하게 만들기
 // 스타일드 컴포넌트를 이용한 애니메이션 속성 적용
@@ -28,16 +29,17 @@ function ProductDetail(props) {
   const {productId} = useParams();
   const dispatch = useDispatch();
 
-  const selectproduct = useSelector(selectSelectedProduct);   // store에서 state 꺼내오기
+  const selectproduct = useSelector(selectSelectedProduct);   // store에서 state 꺼내오기 //상품 product = selectproduct
   const [showinfo, setShowinfo] = useState(true); // quiz: alert을 띄우고 3초 뒤에 사라지게 하기
   // console.log(selectproduct);
-
-  const [ordernumber, setOrdernumber] = useState('1');   // 주문수량 입력
-
+  const [ordernumber, setOrdernumber] = useState(1);   // 주문수량 입력 // =orderCount
   // 탭 UI를 밑에 객체 형태로 표현해서 지워도 됨
   // const [showTabIndex, setShowTabIndex] = useState(0); //탭 상태, 탭 UI 만들기 
-
   const [showTab, setShowTab] = useState('detail'); //탭 UI 객체상태 만들기
+  const [showmodal, setShowmodal] = useState(false); //모달상태
+  const handleClose = () => setShowmodal(false) //장바구니 모달만들기
+  const handleOpen  = () => setShowmodal(true) //장바구니 모달만들기
+  const navigate = useNavigate(); //장바구니 페이지로 이동시키기 위해서 
 
 
 
@@ -59,6 +61,24 @@ function ProductDetail(props) {
     console.log(foundProduct);
     // productSlice
     dispatch(getSelectedProducts(foundProduct));
+
+    // 장바구니 삭제 후 활동, 최근본상품 구현
+    // 해당 상품의 id값을 localStorage에 추가
+    let latestViewed = JSON.parse(localStorage.getItem('latestViewed')) || []; //처음에 null이니까 기본값으로 빈배열 넣어줌
+    // id값을 넣기 전에 기존 배열에 존재하는지 검사하거나 
+    // 아니면 일단 넣고 Set 자료형을 이용하여 중복 제거(간편함)
+    latestViewed.push(productId);
+    latestViewed = new Set(latestViewed); //중복 요소가 제거됨
+    latestViewed = [...latestViewed]
+    localStorage.setItem('latestViewed', JSON.stringify(latestViewed)); //[]를 넣으면 안돼서 문자열 포맷으로 바꿈
+
+
+
+    // 상세페이지가 언마운트될 때 전역상태 초기화(상세페이지갔다가 다른 페이지 누르면 null이 떠야함)
+    return () => { //함수를 리턴
+      //전역 상태 null로 초기화시켜야함
+      dispatch(clearSelectedProduct());
+    }
   }, []);
 
   // quiz: alert을 띄우고 3초 뒤에 사라지게 하기
@@ -119,6 +139,15 @@ function ProductDetail(props) {
           </Col>
 
           <Button variant='primary'>주문하기</Button>
+          <Button variant='warning' onClick={() => {dispatch(addItemToCart({
+            ...selectproduct, // =product
+            // 안에 객체를 넣음
+            count: ordernumber
+          }));
+          handleOpen();}}>
+            장바구니
+          </Button>
+
         </Col>
       </Row>
 
@@ -188,6 +217,27 @@ function ProductDetail(props) {
           'exchage': <div>탭 내용4</div>,
         }[showTab]
       }
+
+
+      {/* 장바구니에 담기 모달 만들기 */}
+      {/* 추후 공통 모달로 만드는 것이 좋음 */}
+      <Modal show={showmodal} onHide={handleClose}>
+        <Modal.Header closeButton>
+          <Modal.Title>🛒Shop 알림</Modal.Title>
+        </Modal.Header>
+        <Modal.Body>장바구니에 상품을 담았습니다.<br />
+        장바구니로 이동하시겠습니까?
+        </Modal.Body>
+        <Modal.Footer>
+          <Button variant="secondary" onClick={handleClose}>
+            취소
+          </Button>
+          <Button variant="primary" onClick={() => {navigate('/cart')}}>
+            확인
+          </Button>
+        </Modal.Footer>
+      </Modal>
+
     </Container>
   );
 }

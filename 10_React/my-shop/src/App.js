@@ -9,6 +9,7 @@ import 'react-toastify/dist/ReactToastify.min.css'; // ReactToastify CSS 추간
 import Header from "./pages/Header";
 import Main from "./pages/Main";
 import ProductDetail from "./pages/ProductDetail";
+import Cart from "./pages/Cart";
 
 
 // 글로벌(공통) 스타일 설정
@@ -24,6 +25,11 @@ const GlobalStyle = createGlobalStyle`
   }
   .cursor-pointer{
     cursor: pointer;
+  }
+  .text-ellipsis{
+    white-space: nowrap; /* 줄 바꿈 안 함 - 얘는 무조건 한 줄을 만듦 */
+    overflow: hidden; //넘친 부분
+    text-overflow: ellipsis;
   }
 `;
 
@@ -48,7 +54,8 @@ function App() {
           {/* /detail/1로 접속하면 productId에 1이 담김 */}
           <Route path="/detail/:productId" element={<ProductDetail />}/>
 
-          
+          {/* 장바구니 페이지 */}
+          <Route path="/cart" element={<Cart />} />          
         </Route>
       </Routes>
 

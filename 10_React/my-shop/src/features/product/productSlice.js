@@ -42,6 +42,10 @@ const productSlice = createSlice({
     getMoreProducts: (state, action) => {
       // console.log(state, action);
       state.productList.push(...action.payload); //스프레드 연산자(...)사용
+    },
+    //productDetail.js에 상세페이지가 언마운트될 때 전역상태 초기화
+    clearSelectedProduct: (state) => {
+      state.selectedProduct = null;
     }
   },
 
@@ -65,7 +69,7 @@ const productSlice = createSlice({
   }
 });
 
-export const {getAllProducts, getSelectedProducts, getMoreProducts} = productSlice.actions;
+export const {getAllProducts, getSelectedProducts, getMoreProducts , clearSelectedProduct} = productSlice.actions;
 
 export const selectProductList = (state) => state.product.productList;
 export const selectSelectedProduct = (state) => state.product.selectedProduct;
