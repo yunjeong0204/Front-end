@@ -120,3 +120,4 @@ https://ujuc.github.io/2015/12/16/git-flow-github-flow-gitlab-flow/
 
 -------------------
 팀플 시 - 뭐 만들게 될 때 브랜치를 따서 작업해야함
+develop으로 만들고 
