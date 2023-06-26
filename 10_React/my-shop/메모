@@ -58,3 +58,13 @@ payload로 받아서 해보기
 
 - 최근 본 상품 구현하기
 LatestView.js
+
+
+자격 증명 관리자 -> 윈도우 자격 증명 
+다른 사람들 git정보가 들어가있으면 제거해야함 하고 pull이나 push하면 뭐가 뜨고
+git config--global user.name ~~
+git config--global user.email ~~
+이름 이메일 다시 git해주어야함
+
+설치 toolkit, axios, bootstrap, styled-components@5.3.11
+npm install --save react-toastify

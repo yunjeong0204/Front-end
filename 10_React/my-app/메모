@@ -181,3 +181,5 @@ store.js에서 store라고 변수 설정해서 스토어라는 props에 전달
 --
 상품추가만들기 ProductList.js, productSlice.js
 store.js에서 만든 거 추가해야함
+
+
