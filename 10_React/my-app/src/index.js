@@ -120,7 +120,7 @@ root.render(
   // <Fileinput />
   // <Reservation />
   // <ReservationRefactoring />
-  // <Signup />
+  <Signup />
   // <SignupRectoring />
 
   // 12장 예제
@@ -150,9 +150,9 @@ root.render(
   // 2. 리액트에 Redux Store 제공하기
   // CounterApp컴포넌트와 그 하위 자식들은 Redux Store에 접근 가능
   // Redux Store에 저장된 state들을 마음대로 꺼내쓸 수 있음
-  <Provider store={store}>
-    <CounterApp />
-  </Provider>
+  // <Provider store={store}>
+  //   <CounterApp />
+  // </Provider>
   
 );
 
