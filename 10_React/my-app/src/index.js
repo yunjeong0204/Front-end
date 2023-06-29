@@ -98,7 +98,7 @@ root.render(
   // 8장 예제
   // <Toggle />
   // <Mybutton />
-  // <ConfirmButton />
+  <ConfirmButton />
 
   // 9장 예제
   // <Greeting isLoggedIn={true}/> // {true} 로그인을 했다
@@ -120,7 +120,7 @@ root.render(
   // <Fileinput />
   // <Reservation />
   // <ReservationRefactoring />
-  <Signup />
+  // <Signup />
   // <SignupRectoring />
 
   // 12장 예제
