@@ -288,3 +288,45 @@ https://chanhuiseok.github.io/posts/react-1/
 현재 영화 상세 페이지
 스태프 권한이 있는 이용자만 접근 가능한 영화 관리
 회원 관리 페이지
+
+//슬라이드 동작
+const ref = useRef();
+const [currentSlide, setCurrentSlide] = useState(0);
+
+useEffect(() => {
+  ref.current.style.marginLeft = `${-currentSlide * 1280}px`;
+}, [currentSlide])
+
+...
+<ul ref={ref} className='slider-list'>
+  ...
+</ul>
+
+
+
+//유효성 검사
+const [currentSlide, setCurrentSlide] = useState(0);
+const [slideLength, setSlideLength] = useState(0);
+
+
+const isCheckActivePrevbutton = useCallback(() => {
+  return currentSlide >= 1
+}, [currentSlide])
+
+const isCheckActiveNextbutton= useCallback(() => {
+  return currentSlide < slideLength - 1
+}, [currentSlide, slideLength])
+
+//이벤트발생
+const prevButtonClick = useCallback(() => {
+  if(!isCheckActivePrevbutton()) return
+  setCurrentSlide(prev => prev - 1)
+}, [isCheckActivePrevbutton])
+
+const nextButtonClick = useCallback(() => {
+  if (!isCheckActiveNextbutton()) return
+  setCurrentSlide(prev => prev + 1)
+}, [isCheckActiveNextbutton])
+
+<button onClick={prevButtonClick} className='btn-arrow btn-prev'></button>
+<button onClick={nextButtonClick} className='btn-arrow btn-next'></button>
