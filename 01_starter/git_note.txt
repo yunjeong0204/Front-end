@@ -330,3 +330,11 @@ const nextButtonClick = useCallback(() => {
 
 <button onClick={prevButtonClick} className='btn-arrow btn-prev'></button>
 <button onClick={nextButtonClick} className='btn-arrow btn-next'></button>
+
+
+
+게시판 CommunityWrapper
+
+postlist 
+
+MovieItem import해서 하면 좋을 거 같다.
