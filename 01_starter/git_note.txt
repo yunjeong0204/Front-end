@@ -343,3 +343,20 @@ setViewContent(viewContent.concat({...communityContent}))
 }} => handleButton만들어서 onClick={handleButton} 적용
 
  
+
+
+const [expandedIndex, setExpandedIndex] = useState(-1);
+const handleToggleExpand = (index) => {
+  setExpandedIndex(index === expandedIndex ? -1 : index);
+};
+
+처음 titie, content 그대로 content만 접기 
+
+
+
+const content = (e) => {
+  const copy = [...]
+  copy.push
+  set(copy)
+  set
+}
