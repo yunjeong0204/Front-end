@@ -337,4 +337,9 @@ const nextButtonClick = useCallback(() => {
 
 postlist 
 
-MovieItem import해서 하면 좋을 거 같다.
+community.js > 
+onClick={() => {
+setViewContent(viewContent.concat({...communityContent}))
+}} => handleButton만들어서 onClick={handleButton} 적용
+
+ 
