@@ -360,3 +360,6 @@ const content = (e) => {
   set(copy)
   set
 }
+
+헤더 : #BFD989
+배경 : #FDF6EE
